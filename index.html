@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Studio Kissyla | Manicure e Unhas em Gel</title>
+<meta name="description" content="Studio Kissyla: unhas em gel, alongamento e nail art. Agende online.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--c:#b8456f;--ink:#2a1820;--mut:#7d6670;--bg:#fbf6f4;--card:#fff;--ln:#ecdde0;--r:14px}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}
+body{font:400 16px/1.6 Jost,system-ui,sans-serif;color:var(--ink);background:var(--bg)}
+h1,h2,h3,.logo{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
+h2{font-size:clamp(2rem,5vw,3rem);margin-bottom:.4em}
+section{padding:72px 6vw;max-width:1180px;margin:auto}
+a{color:inherit}img{max-width:100%;display:block}
+.btn{display:inline-block;border:0;background:var(--c);color:#fff;padding:14px 28px;border-radius:99px;font:500 1rem Jost;cursor:pointer;text-decoration:none}
+.btn.o{background:none;color:var(--c);border:1.5px solid var(--c)}.btn.s{padding:7px 14px;font-size:.85rem}
+.btn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible{outline:3px solid #e9a3bc;outline-offset:2px}
+nav{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:14px 6vw;background:rgba(251,246,244,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--ln)}
+.logo{font-size:1.7rem}nav div a{margin-left:22px;text-decoration:none;font-size:.95rem}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;min-height:80vh}
+.hero h1{font-size:clamp(2.8rem,7vw,5.2rem);margin-bottom:.3em}.hero p{color:var(--mut);max-width:30em;margin-bottom:28px;font-size:1.1rem}
+.hero img{border-radius:200px 200px 18px 18px;aspect-ratio:4/5;object-fit:cover;width:100%;box-shadow:0 30px 60px -30px var(--c)}
+.sv{display:grid;gap:12px}.sv label{display:flex;justify-content:space-between;gap:16px;align-items:center;background:var(--card);border:1.5px solid var(--ln);border-radius:var(--r);padding:16px 20px}
+.sv label:has(input:checked){border-color:var(--c);background:#fff4f8}.sv input{accent-color:var(--c);margin-right:12px}
+.sv small{color:var(--mut);display:block}.sv b{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--c);white-space:nowrap}
+.gal{columns:3 220px;gap:14px}.gal img{width:100%;margin-bottom:14px;border-radius:var(--r)}
+.bk{display:grid;grid-template-columns:1fr 1fr;gap:36px}.box{background:var(--card);border:1px solid var(--ln);border-radius:20px;padding:26px}
+.days{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px}.days button,.slots button{border:1.5px solid var(--ln);background:#fff;border-radius:12px;padding:8px 12px;font:inherit;cursor:pointer;min-width:72px}
+.days button[disabled]{opacity:.35;cursor:not-allowed}.days .on,.slots .on{background:var(--c);color:#fff;border-color:var(--c)}
+.slots{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.lb{font-weight:500;margin:18px 0 8px;display:block}
+input,select,textarea{width:100%;padding:11px 14px;border:1.5px solid var(--ln);border-radius:10px;font:inherit;background:#fff}
+.ab{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}.ab img{border-radius:var(--r);box-shadow:0 20px 50px -25px #000}
+footer{background:var(--ink);color:#e9d9de;text-align:center;padding:44px 6vw}footer a{color:#fff}
+.wf{position:fixed;right:18px;bottom:18px;z-index:6;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.muted{color:var(--mut)}.ok{background:#eaf7ee;border-radius:12px;padding:16px;margin-top:14px}
+@media(max-width:760px){.hero,.bk,.ab{grid-template-columns:1fr}.hero img{order:-1;max-height:420px}nav div a:not(.btn){display:none}section{padding:52px 5vw}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+/* admin */
+#adm{position:fixed;inset:0;background:var(--bg);z-index:20;overflow:auto;display:none}
+#adm.on{display:block}.ah{display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:var(--ink);color:#fff;position:sticky;top:0;z-index:2}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;padding:14px 5vw;border-bottom:1px solid var(--ln);background:#fff}
+.tabs button{border:0;background:none;padding:9px 16px;border-radius:99px;font:500 .95rem Jost;cursor:pointer}.tabs .on{background:var(--c);color:#fff}
+.ap{max-width:900px;margin:auto;padding:28px 5vw 80px}.ap h3{font-size:1.8rem;margin:22px 0 10px}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;background:#fff;border:1px solid var(--ln);border-radius:12px;padding:12px;margin-bottom:10px;align-items:end}
+.row label{font-size:.8rem;color:var(--mut)}.f{margin-bottom:14px}.f label{font-size:.9rem;color:var(--mut);display:block;margin-bottom:4px}
+.tg{display:inline-block;padding:2px 10px;border-radius:99px;font-size:.8rem;background:#fde8c8}.tg.confirmado{background:#d6f2dd}.tg.cancelado{background:#eee;color:#888}
+.gi{display:flex;flex-wrap:wrap;gap:12px}.gi div{width:130px}.gi img{height:130px;object-fit:cover;border-radius:10px;width:100%}
+</style></head><body>
+<nav><span class="logo" id="nb"></span><div><a href="#servicos">Serviços</a><a href="#galeria">Trabalhos</a><a href="#curso">Curso</a><a class="btn s" href="#agendar">Agendar</a></div></nav>
+<section class="hero"><div><h1 id="ht"></h1><p id="hs"></p><a class="btn" href="#agendar">Agendar horário</a> <a class="btn o" href="#galeria">Ver trabalhos</a></div><img id="hi" alt="Unhas em gel com acabamento refinado"></section>
+<section id="servicos"><h2>Serviços</h2><p class="muted" style="margin-bottom:24px">Escolha o serviço e reserve seu horário em poucos cliques.</p><div class="sv" id="sv"></div></section>
+<section id="galeria"><h2>Nossos trabalhos</h2><div class="gal" id="gl"></div></section>
+<section id="agendar"><h2>Agende seu horário</h2><div class="bk"><div class="box"><span class="lb" style="margin-top:0">1. Serviço</span><select id="bs"></select><span class="lb">2. Dia</span><div class="days" id="bd"></div><span class="lb">3. Horário</span><div class="slots" id="bt"></div></div><div class="box"><span class="lb" style="margin-top:0">4. Seus dados</span><input id="bn" placeholder="Seu nome" autocomplete="name"><br><br><input id="bp" placeholder="Seu WhatsApp com DDD" inputmode="tel"><br><br><button class="btn" id="bg">Enviar pedido</button><p class="muted" id="bm" style="margin-top:16px">Selecione serviço, dia e horário.</p><p id="br" class="ok" hidden></p></div></div></section>
+<section id="curso"><div class="ab"><img id="ci" alt="Conteúdo do curso de unhas em gel"><div><h2>Curso de unhas em gel</h2><p id="ca" style="margin-bottom:22px;white-space:pre-line"></p><a class="btn" id="cw" target="_blank" rel="noopener">Quero saber mais</a></div></div></section>
+<footer><div class="logo" id="fl" style="font-size:2rem"></div><p id="fa" style="margin:8px 0"></p><p><a id="fi" target="_blank" rel="noopener"></a></p><p style="margin-top:18px;font-size:.85rem;opacity:.8">© <span id="yr"></span> <span id="fn"></span></p></footer>
+<a class="btn wf" id="wf" target="_blank" rel="noopener">WhatsApp</a>
+<div id="adm"><div class="ah"><b class="logo">Painel Studio Kissyla</b><button class="btn s" id="ax">Sair</button></div><div class="tabs" id="at"></div><div class="ap" id="ac"></div></div>
+<script>
+const KEY='studiokissyla';
+const G=['data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5Ojf/2wBDAQoKCg0MDRoPDxo3JR8lNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc'];
+const DN=['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'];
+const DEF={name:'Studio Kissyla',hero:'Unhas que contam a sua elegância',sub:'Gel, alongamento e nail art com acabamento impecável, durabilidade e delicadeza em cada detalhe.',wa:'5521965757113',ig:'studiokissyla',addr:'Rua das Flores, 123, centro',color:'#b8456f',pass:'kissyla123',about:'Aprenda do zero a fazer unhas em gel: tipos de gel, preparação, aplicação, manutenção, remoção segura, decorações e modelagem.\nO material está incluso no curso.',msg:'Olá, Studio Kissyla! Gostaria de agendar:\n*Serviço:* {servico}\n*Data:* {data} às {hora}\n*Valor:* {valor}\n*Nome:* {nome}\nAguardo a confirmação, obrigada!',cmsg:'Olá! Vi o curso de unhas em gel e gostaria de mais informações.',svc:[{id:1,n:'Esmaltação em gel',p:70,d:'Cutilagem e esmaltação com gel',t:60},{id:2,n:'Alongamento em gel',p:180,d:'Aplicação completa no formato que você escolher',t:150},{id:3,n:'Manutenção de unhas',p:120,d:'Preservação e ajuste do alongamento',t:90},{id:4,n:'Nail art',p:90,d:'Desenhos e detalhes personalizados',t:75}],hrs:[{on:0,o:'09:00',c:'18:00'},...[1,2,3,4,5].map(()=>({on:1,o:'09:00',c:'18:00'})),{on:1,o:'09:00',c:'14:00'}],step:30,ahead:30,adv:60,blocked:[],appts:[],gal:['@0','@1','@2'],lock:0};
+let D=JSON.parse(JSON.stringify(DEF));try{Object.assign(D,JSON.parse(localStorage.getItem(KEY)||'{}'))}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(D))}catch(e){alert('Armazenamento cheio. Remova fotos ou exporte um backup.')}};
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)], P=n=>String(n).padStart(2,'0'), R=v=>'R$ '+Number(v||0).toFixed(2).replace('.',','), iso=d=>d.getFullYear()+'-'+P(d.getMonth()+1)+'-'+P(d.getDate()), mn=s=>{const[h,m]=s.split(':');return +h*60 + +m}, ft=m=>{const h=Math.floor(m/60),mm=m%60;return P(h)+':'+P(mm)}, src=s=>s[0]=='@'?G[+s.slice(1)]:s, fd=s=>{const[y,m,d]=s.split('-');return `${d}/${m}/${y}`}, esc=s=>String(s??'').replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])), wl=(n,t)=>`https://wa.me/${n.replace(/\D/g,'')}?text=${encodeURIComponent(t)}`, fill=(t,o)=>t.replace(/\{(\w+)\}/g,(_,k)=>o[k]??'');
+const B={s:null,d:null,t:null};
+function slots(date,dur){const dt=new Date(date+'T00:00'),h=D.hrs[dt.getDay()];if(!h||!h.on||D.blocked.includes(date))return[];const out=[],now=new Date(),lim=now.getHours()*60+now.getMinutes()+ +D.adv;const td= now.getFullYear()===dt.getFullYear() && now.getMonth()===dt.getMonth() && now.getDate()===dt.getDate(); for(let s=mn(h.o);s+dur<=mn(h.c);s+=+D.step){if(td&&s<lim)continue;if(D.appts.some(a=>a.d==date&&a.st!='cancelado'&&s<mn(a.t)+a.dur&&s+dur>mn(a.t)))continue;out.push(ft(s))}return out}
+const svc=()=>D.svc.find(x=>x.id==B.s)||D.svc[0];
+function site(){document.documentElement.style.setProperty('--c',D.color);document.title=D.name+' | Manicure e Unhas em Gel';
+$('#nb').textContent=$('#fl').textContent=D.name;$('#ht').textContent=D.hero;$('#hs').textContent=D.sub;$('#hi').src=G[1];$('#ci').src=G[3];$('#ca').textContent=D.about;$('#fa').textContent=D.addr;$('#fi').textContent='@'+D.ig;$('#fi').href='https://instagram.com/'+D.ig;$('#wf').href=wl(D.wa,'Olá! Vim pelo site e gostaria de um atendimento.');$('#cw').href=wl(D.wa,D.cmsg);$('#yr').textContent=new Date().getFullYear();$('#fn').textContent=D.name;
+$('#sv').innerHTML=D.svc.map(s=>`<label><span><input type="radio" name="sv" value="${s.id}"><b style="font-family:Jost;font-size:1.05rem;color:var(--ink)">${esc(s.n)}</b><small>${esc(s.d)} · ${s.t} min</small></span><b>${R(s.p)}</b></label>`).join('');
+$$('#sv input').forEach(i=>i.onchange=()=>{B.s=i.value;B.t=null;$('#bs').value=i.value;book();location.hash='agendar'});
+$('#gl').innerHTML=D.gal.map(g=>`<img loading="lazy" src="${src(g)}" alt="Trabalho de unhas do ${esc(D.name)}">`).join('');
+$('#bs').innerHTML=D.svc.map(s=>`<option value="${s.id}">${esc(s.n)} (${R(s.p)})</option>`).join('');if(!B.s&&D.svc[0])B.s=D.svc[0].id;$('#bs').value=B.s;book()}
+function book(){const s=svc();if(!s)return;const t=new Date(),ds=[];for(let i=0;i<=D.ahead;i++){const d=new Date(t.getFullYear(),t.getMonth(),t.getDate()+i);ds.push(iso(d))}
+$('#bd').innerHTML=ds.map(d=>{const x=new Date(d+'T00:00'),ok=slots(d,s.t).length>0;return `<button data-d="${d}" ${ok?'':'disabled'} class="${B.d==d?'on':''}"><small>${DN[x.getDay()].slice(0,3)}</small><br>${d.slice(8,10)}</button>`}).join('');
+$$('#bd button').forEach(b=>b.onclick=()=>{B.d=b.dataset.d;B.t=null;book()});
+const sl=B.d?slots(B.d,s.t):[];$('#bt').innerHTML=B.d?(sl.length?sl.map(h=>`<button data-t="${h}" class="${B.t==h?'on':''}">${h}</button>`).join(''):'<span class="muted">Sem horários neste dia.</span>'):'<span class="muted">Selecione um dia.</span>';
+$$('#bt button').forEach(b=>b.onclick=()=>{B.t=b.dataset.t;book()});
+$('#bm').textContent=B.d&&B.t?`${s.n} · ${fd(B.d)} às ${B.t} · ${R(s.p)}`:'Selecione serviço, dia e horário.'}
+$('#bs').onchange=e=>{B.s=e.target.value;B.t=null;book()};
+$('#bg').onclick=()=>{const s=svc(),n=$('#bn').value.trim(),p=$('#bp').value.trim();if(!B.d||!B.t||n.length<2||p.replace(/\D/g,'').length<10)return alert('Escolha dia e horário e informe nome e WhatsApp válidos.');D.appts.push({id:Date.now(),n,ph:p,s:s.n,v:s.p,d:B.d,t:B.t,dur:s.t,st:'pendente'});save();const m=fill(D.msg,{nome:n,servico:s.n,data:fd(B.d),hora:B.t,valor:R(s.p)});window.open(wl(D.wa,m),'_blank');$('#br').hidden=0;$('#br').textContent='Pedido enviado! Finalize a conversa no WhatsApp para confirmarmos seu horário.';B.t=null;book()};
+/* ===== ADMIN ===== */
+let TAB='geral';const TABS={geral:'Geral',svc:'Serviços',hrs:'Horários',agenda:'Agenda',gal:'Fotos',bkp:'Backup'};
+function openAdm(){if(!sessionStorage.ok){const p=prompt('Senha da área da profissional:');if(p!==D.pass){location.hash='';return}sessionStorage.ok=1}$('#adm').classList.add('on');adm()}
+function adm(){$('#at').innerHTML=Object.entries(TABS).map(([k,v])=>`<button data-k="${k}" class="${TAB==k?'on':''}">${v}</button>`).join('');
+$$('#at button').forEach(b=>b.onclick=()=>{TAB=b.dataset.k;adm()});const c=$('#ac');
+const F=(k,l,t='input')=>`<div class="f"><label>${l}</label><${t} data-s="${k}" ${t=='input'?`value="${esc(D[k])}"`:'rows="4"'}>${t=='input'?'':esc(D[k])+'</textarea'}${t=='input'?'':'>'}</div>`;
+if(TAB=='geral')c.innerHTML=`<h3>Informações do studio</h3>${F('name','Nome do studio')}${F('hero','Título da página inicial')}${F('sub','Subtítulo','textarea')}${F('wa','WhatsApp (com 55 e DDD)')}${F('ig','Instagram')} ${F('addr','Endereço')}<div class="f"><label>Cor principal</label><input type="color" data-s="color" value="${D.color}" style="height:46px"></div><h3>Mensagem pronta do agendamento</h3><p class="muted">Use: {nome} {servico} {data} {hora} {valor}</p>${F('msg','Mensagem','textarea')}${F('cmsg','Mensagem do curso','textarea')}${F('pass','Senha')}`;
+if(TAB=='svc')c.innerHTML=`<h3>Serviços</h3>${D.svc.map((s,i)=>`<div class="row"><div><label>Nome</label><input data-a="svc" data-i="${i}" data-f="n" value="${esc(s.n)}"></div><div><label>Preço (R$)</label><input data-a="svc" data-i="${i}" data-f="p" type="number" value="${s.p}"></div><div><label>Tempo (min)</label><input data-a="svc" data-i="${i}" data-f="t" type="number" value="${s.t}"></div><div><label>Descrição</label><input data-a="svc" data-i="${i}" data-f="d" value="${esc(s.d)}"></div></div>`).join('')}<button class="btn s" id="add">Adicionar serviço</button>`;
+if(TAB=='hrs')c.innerHTML=`<h3>Horário de funcionamento</h3>${D.hrs.map((h,i)=>`<div class="row"><b>${DN[i]}</b><div><label><input type="checkbox" style="width:auto" data-a="hrs" data-i="${i}" data-f="on" ${h.on?'checked':''}> Ativo</label></div><div><label>Abre</label><input data-a="hrs" data-i="${i}" data-f="o" type="time" value="${h.o}"></div><div><label>Fecha</label><input data-a="hrs" data-i="${i}" data-f="c" type="time" value="${h.c}"></div></div>`).join('')}<h3>Regras</h3><div class="row"><div><label>Intervalo entre horários (min)</label><input type="number" data-s="step" value="${D.step}"></div><div><label>Antecedência mínima (min)</label><input type="number" data-s="adv" value="${D.adv}"></div><div><label>Próximos dias disponíveis</label><input type="number" data-s="ahead" value="${D.ahead}"></div></div><h3>Folgas e feriados</h3><div class="row"><input type="date" id="bd2"><button class="btn s" id="bb">Bloquear dia</button></div><p>${D.blocked.sort().map(d=>`<span class="tg" style="margin:3px">${fd(d)}</span>`).join(' ')||'<span class="muted">Nenhum</span>'}</p>`;
+if(TAB=='agenda'){const L=[...D.appts].sort((a,b)=>(a.d+a.t).localeCompare(b.d+b.t));c.innerHTML=`<h3>Novo agendamento manual</h3><div class="row"><div><label>Cliente</label><input id="mn"></div><div><label>Serviço</label><select id="ms">${D.svc.map(s=>`<option value="${s.id}">${esc(s.n)}</option>`).join('')}</select></div><div><label>Dia</label><input type="date" id="md"></div><div><label>Hora</label><input type="time" id="mt"></div></div><button class="btn s" id="ma">Salvar</button><h3>Agenda</h3>${L.length?L.map(a=>`<div class="row"><div><label>Cliente</label><b>${esc(a.n)}</b></div><div><label>Serviço</label><span>${esc(a.s)}</span></div><div><label>Data</label><span>${fd(a.d)} ${a.t}</span></div><div><label>Status</label><span class="tg ${a.st}">${a.st}</span></div><div><label>Ações</label><button class="btn o s" data-st="confirmado" data-id="${a.id}">Confirmar</button> <button class="btn o s" data-st="cancelado" data-id="${a.id}">Cancelar</button></div></div>`).join(''):'<p class="muted">Sem agendamentos.</p>'}`;
+if(TAB=='gal')c.innerHTML=`<h3>Fotos da galeria</h3><div class="gi">${D.gal.map((g,i)=>`<div><img src="${src(g)}" alt=""><button class="btn o s" style="width:100%;margin-top:6px" data-del="gal" data-i="${i}">Excluir</button></div>`).join('')}</div><input type="file" id="up" accept="image/*" multiple><button class="btn s" id="ex">Exportar backup</button>`;
+if(TAB=='bkp')c.innerHTML=`<h3>Backup e transferência</h3><p class="muted" style="margin-bottom:14px">As configurações ficam salvas neste navegador. Exporte um backup para guardar ou levar para outro dispositivo.</p><button class="btn s" id="ex">Exportar backup</button> <button class="btn o s" id="rs">Resetar</button><input type="file" id="im" accept="application/json" style="margin-top:12px">`;
+function bind(){const c=$('#ac');
+$$('#ac [data-s]').forEach(i=>i.oninput=()=>{D[i.dataset.s]=i.type=='number'?+i.value:i.value;save()});
+$$('#ac [data-a]').forEach(i=>i.oninput=i.onchange=()=>{D[i.dataset.a][i.dataset.i][i.dataset.f]=i.type=='checkbox'?+i.checked:i.type=='number'?+i.value:i.value;save()});
+$$('#ac [data-del]').forEach(b=>b.onclick=()=>{if(!confirm('Excluir?'))return;const k=b.dataset.del;if(b.dataset.id)D[k]=D[k].filter(x=>x.id!=b.dataset.id);else D[k].splice(b.dataset.i,1);save();adm()});
+$$('#ac [data-st]').forEach(b=>b.onclick=()=>{D.appts.find(a=>a.id==b.dataset.id).st=b.dataset.st;save();adm()});
+const on=(id,f)=>{const e=$(id);if(e)e.onclick=f};
+on('#add',()=>{D.svc.push({id:Date.now(),n:'Novo serviço',p:0,d:'',t:60});save();adm()});
+on('#bb',()=>{const v=$('#bd2').value;if(v&&!D.blocked.includes(v)){D.blocked.push(v);save();adm()}});
+on('#ma',()=>{const s=D.svc.find(x=>x.id==$('#ms').value),d=$('#md').value,t=$('#mt').value,n=$('#mn').value;if(!s||!d||!t||!n)return alert('Preencha cliente, serviço, dia e hora.');D.appts.push({id:Date.now(),n,ph:'',s:s.n,v:s.p,d,t,dur:s.t,st:'pendente'});save();adm()});
+on('#ex',()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(D)],{type:'application/json'}));a.download='studiokissyla-backup.json';a.click()});
+on('#rs',()=>{if(confirm('Apagar tudo e voltar ao padrão?')){localStorage.removeItem(KEY);location.reload()}});
+const im=$('#im');if(im)im.onchange=async()=>{try{D=Object.assign({},DEF,JSON.parse(await im.files[0].text()));save();alert('Backup importado.');adm()}catch(e){alert('Arquivo inválido.')}};
+const up=$('#up');if(up)up.onchange=()=>[...up.files].forEach(f=>{const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const k=Math.min(1,900/Math.max(im.width,im.height)),cv=document.createElement('canvas');cv.width=im.width*k;cv.height=im.height*k;const ctx=cv.getContext('2d');ctx.drawImage(im,0,0,cv.width,cv.height);const data=cv.toDataURL('image/jpeg',.82);D.gal.push(data);save();adm();};im.src=r.result;};r.readAsDataURL(f);});
+$('#ax').onclick=()=>{$('#adm').classList.remove('on');location.hash='';site()};
+$('#al').onclick=e=>{e.preventDefault();openAdm()};
+if(location.hash=='#admin')openAdm();
+site();
+}
+bind();
+</script></body></html>
